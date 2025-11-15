@@ -1,30 +1,27 @@
-# load packages and data
-
 install.packages("BiocManager")
 
-BiocManager::install(c("TCGAbiolinks", "SummarizedExperiment"))
+BiocManager::install(c("recount3", "SummarizedExperiment", "recount"))
 
-library(TCGAbiolinks)
+library(recount)
+library(SummarizedExperiment)
 
-query <- GDCquery(
-  project = c("TCGA-LGG", "TCGA-GBM"),
-  data.category = "Transcriptome Profiling",
-  data.type = "Gene Expression Quantification",
-  workflow.type = "STAR - Counts"
-)
+library(recount3)
 
-GDCdownload(query)
-tcga_data <- GDCprepare(query)
+human_projects <- available_projects("human")
 
+tcga_projects <- subset(human_projects, file_source == "tcga")
+head(tcga_projects)
 
+lgg_info <- subset(tcga_projects, project == "LGG")
 
-#Loading and Processing Normal Tissue Data (GTEx)
+gbm_info <- subset(tcga_projects, project == "GBM")
 
-# Read the massive GTEx TPM file (this takes a moment and requires sufficient RAM)
-install.packages("data.table")
-library(data.table)
+lgg_info
+gbm_info
 
-gtex_tpm <- fread("C:/Users/jerry/OneDrive/Documents/bioinformatics/Final project/GTEx_Analysis_2022-06-06_v10_RNASeQCv2.4.2_gene_tpm_non_lcm.gct", 
-                  sep = "\t", 
-                  skip = 2)
+rse_lgg <- create_rse(lgg_info)
+rse_gbm <- create_rse(gbm_info)
+
+colnames(colData(rse_lgg))
+colnames(colData(rse_gbm))
 
