@@ -25,3 +25,15 @@ rse_gbm <- create_rse(gbm_info)
 colnames(colData(rse_lgg))
 colnames(colData(rse_gbm))
 
+
+#GTEX Transcripts per Million
+
+# Read the massive GTEx TPM file (this takes a moment and requires sufficient RAM)
+install.packages("data.table")
+library(data.table)
+
+gtex_tpm <- fread("C:/Users/jerry/OneDrive/Documents/bioinformatics/Final project/GTEx_Analysis_2022-06-06_v10_RNASeQCv2.4.2_gene_tpm_non_lcm.gct", 
+                  sep = "\t", 
+                  skip = 2)
+
+
