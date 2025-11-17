@@ -1,2 +1,7 @@
 GDCdata/*
 MANIFEST.txt
+*.rds
+*.Rproj
+.Rhistory
+.RData
+.Rproj.user/
