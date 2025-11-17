@@ -1,13 +1,8 @@
 #!/usr/bin/env Rscript
 
-# Lightweight pipeline driver for glioma-project.
-#
-# Usage examples (quote the script path if the repo lives in a directory with spaces):
-#   Rscript ./run.r
-#   Rscript "./run.r" --sequence=MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDD --n_states=4
+# Minimal smoke test for ProteinDomainHMM. Intended to run quickly with synthetic input.
 
 get_script_dir <- function() {
-    # Works for Rscript as well as sourcing in interactive sessions.
     cmd_args <- commandArgs(trailingOnly = FALSE)
     file_flag <- "--file="
     script_path <- NULL
@@ -24,7 +19,11 @@ get_script_dir <- function() {
     normalizePath(dirname(script_path), winslash = "/", mustWork = FALSE)
 }
 
-PROJECT_ROOT <- get_script_dir()
+PROJECT_ROOT <- normalizePath(
+    file.path(get_script_dir(), ".."),
+    winslash = "/",
+    mustWork = FALSE
+)
 
 safely_source <- function(relative_path) {
     target <- file.path(PROJECT_ROOT, relative_path)
@@ -34,17 +33,25 @@ safely_source <- function(relative_path) {
     source(target, local = FALSE)
 }
 
-# Load project scripts (rnaseq.r may be empty today but is the expected home for preprocessing helpers).
-safely_source("src/rnaseq.r")
+safely_source("src/motif_hmm.r")
 safely_source("src/hmm.r")
+
+if (!exists("ProteinDomainHMM", inherits = TRUE)) {
+    stop("ProteinDomainHMM is unavailable after sourcing src/hmm.r")
+}
+ProteinDomainHMM <- get("ProteinDomainHMM", inherits = TRUE)
+if (!exists("ProteinMotifDetector", inherits = TRUE)) {
+    stop("ProteinMotifDetector is unavailable after sourcing src/motif_hmm.r")
+}
+ProteinMotifDetector <- get("ProteinMotifDetector", inherits = TRUE)
 
 parse_args <- function() {
     defaults <- list(
-        sequence = "MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDD",
+        sequence = "MEEPQSDPSVEPPLSQETF",
         n_states = 3L,
-        min_domain = 10L,
-        output = "output/hmm_domains.rds",
-        verbose = FALSE
+        min_domain = 8L,
+        verbose = FALSE,
+        output = "output/tests/hmm_smoke_test.rds"
     )
 
     args <- commandArgs(trailingOnly = TRUE)
@@ -68,10 +75,10 @@ parse_args <- function() {
             opts$n_states <- as.integer(value)
         } else if (identical(key, "min_domain")) {
             opts$min_domain <- as.integer(value)
-        } else if (identical(key, "output")) {
-            opts$output <- value
         } else if (identical(key, "verbose")) {
             opts$verbose <- tolower(value) %in% c("1", "true", "t", "yes", "y")
+        } else if (identical(key, "output")) {
+            opts$output <- value
         } else {
             warning(sprintf("Unknown argument '%s'; ignoring.", key))
         }
@@ -87,20 +94,10 @@ parse_args <- function() {
     opts
 }
 
-run_demo_pipeline <- function(opts) {
-    if (!exists("ProteinDomainHMM", inherits = TRUE)) {
-        stop("ProteinDomainHMM is not available. Did src/hmm.r fail to load?")
-    }
+main <- function() {
+    opts <- parse_args()
 
-    abs_output <- if (grepl("^/", opts$output)) {
-        opts$output
-    } else {
-        file.path(PROJECT_ROOT, opts$output)
-    }
-    dir.create(dirname(abs_output), recursive = TRUE, showWarnings = FALSE)
-
-    hmm_class <- get("ProteinDomainHMM", inherits = TRUE)
-    hmm <- hmm_class$new(
+    hmm <- ProteinDomainHMM$new(
         n_states = opts$n_states,
         min_domain = opts$min_domain,
         verbose = opts$verbose
@@ -108,41 +105,57 @@ run_demo_pipeline <- function(opts) {
 
     if (opts$verbose) {
         message(sprintf(
-            "Running HMM on sequence of length %d with %d states…",
+            "Smoke test: sequence length=%d, states=%d",
             nchar(opts$sequence),
             opts$n_states
         ))
     }
 
-    fit <- hmm$identify_domains(opts$sequence)
-
-    payload <- list(
-        metadata = list(
-            generated_at = Sys.time(),
-            sequence_length = nchar(opts$sequence),
-            n_states = opts$n_states,
-            min_domain = opts$min_domain
+    res <- hmm$identify_domains(opts$sequence)
+    motif_summary <- hmm$identify_motifs(
+        sequence = opts$sequence,
+        motifs = c(
+            activation = "MEEPQ",
+            dna_binding = "SQETF"
         ),
-        domains = fit$domains,
-        posterior = fit$posterior,
-        viterbi_path = fit$viterbi_path,
-        loglik = fit$loglik
+        probability_threshold = 0.6
     )
 
-    saveRDS(payload, abs_output)
+    detector <- ProteinMotifDetector$new(motif_threshold = 0.6)
+    standalone_motifs <- detector$find_motifs(
+        sequence = opts$sequence,
+        motifs = c(
+            activation = "MEEPQ",
+            dna_binding = "SQETF"
+        ),
+        probability_threshold = 0.6
+    )
+
+    abs_output <- if (grepl("^/", opts$output)) {
+        opts$output
+    } else {
+        file.path(PROJECT_ROOT, opts$output)
+    }
+    dir.create(dirname(abs_output), recursive = TRUE, showWarnings = FALSE)
+    saveRDS(
+        list(
+            domains = res,
+            motifs = motif_summary,
+            standalone_motifs = standalone_motifs
+        ),
+        abs_output
+    )
 
     message(sprintf(
-        "Saved %d domain(s) and related outputs to %s",
-        if (!is.null(fit$domains)) nrow(fit$domains) else 0,
+        paste0(
+            "Smoke test OK: %d domain(s), %d motif hit(s) detected (logLik=%.3f). ",
+            "Output saved to %s"
+        ),
+        if (!is.null(res$domains)) nrow(res$domains) else 0,
+        if (!is.null(motif_summary$hits)) nrow(motif_summary$hits) else 0,
+        res$loglik,
         abs_output
     ))
-
-    invisible(payload)
-}
-
-main <- function() {
-    opts <- parse_args()
-    run_demo_pipeline(opts)
 }
 
 if (sys.nframe() == 0) {
