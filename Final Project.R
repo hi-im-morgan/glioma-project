@@ -67,6 +67,8 @@ gtex_mat   <- gtex_counts[common_genes, , drop = FALSE]
 
 ##### 4. Build combined matrix + metadata #####
 combined <- cbind(glioma_mat, gtex_mat)
+mean(combined == 0)
+
 
 # create sample-level table
 meta_glioma <- glioma_meta
@@ -105,11 +107,6 @@ meta_comb <- rbind(glioma_meta2, gtex_meta2)
 # Create source / group variables
 meta_comb$source <- ifelse(rownames(meta_comb) %in% colnames(glioma_mat), "TCGA", "GTEx")
 meta_comb$group  <- ifelse(meta_comb$source == "TCGA", "Glioma", "Normal")
-
-# optional: if you have LGG vs GBM info and want to keep it:
-if(!"project" %in% colnames(meta_comb) && "project" %in% names(meta_comb)) {
-  meta_comb$project <- meta_comb$project
-}
 
 # reorder metadata to match combined columns
 meta_comb <- meta_comb[colnames(combined), , drop = FALSE]
@@ -172,19 +169,18 @@ dge <- dge[keep, , keep.lib.sizes = FALSE]
 ##### 7. Normalization & design #####
 dge <- calcNormFactors(dge)   # TMM normalization
 
-# Create design: include source (batch) and group (Glioma vs Normal)
-meta_comb$group <- factor(meta_comb$group)
-meta_comb$source <- factor(meta_comb$source)
+# Create design (Normal = reference)
+meta_comb$group  <- factor(meta_comb$group, levels = c("Normal", "Glioma"))
+meta_comb$source <- factor(meta_comb$source)   # harmless to keep as factor
 
-# If you have covariates like sex/age, include them here (if available in metadata)
-# For example: meta_comb$sex, meta_comb$age
-# design <- model.matrix(~ source + sex + age + group, data = meta_comb)
-# Simpler default:
-design <- model.matrix(~ source + group, data = meta_comb)
+# Simple model: Glioma vs Normal only
+design <- model.matrix(~ group, data = meta_comb)
 colnames(design)
 
+
+
 ##### 8. voom + limma #####
-v <- voom(dge, design = design, plot = TRUE)
+v <- voom(dge, design = design, plot = FALSE)
 fit <- lmFit(v, design)
 
 # Contrast: test groupGlioma vs groupNormal while adjusting for source
@@ -192,9 +188,11 @@ fit <- lmFit(v, design)
 fit <- eBayes(fit)
 
 # Extract results for the group effect (name may be "groupGlioma" or "groupGlioma" depending on factor levels)
-coef_name <- grep("^group", colnames(fit$coefficients), value = TRUE)
+coef_name <- grep("groupNormal", colnames(fit$coefficients), value = TRUE)
 coef_name
 top_all <- topTable(fit, coef = coef_name[1], number = Inf, sort.by = "P")
+
+
 
 ##### 9. Select upregulated in Glioma #####
 # criteria: logFC > 1 and adj.P.Val < 0.05 (adjust as needed)
@@ -212,12 +210,12 @@ with(top_all, plot(logFC, -log10(adj.P.Val + 1e-100), pch=20, main="Volcano: Gli
 with(subset(top_all, logFC>1 & adj.P.Val<0.05), points(logFC, -log10(adj.P.Val+1e-100), col="red", pch=20))
 
 # Heatmap of top genes (requires pheatmap package)
-if(requireNamespace("pheatmap", quietly = TRUE)) {
-  library(pheatmap)
-  topn <- rownames(head(top_all[order(top_all$adj.P.Val), ], n = 50))
-  z <- cpm(dge, log=TRUE)[topn, ]
-  pheatmap(z, annotation_col = data.frame(Group=meta_comb$group, Source=meta_comb$source))
-}
+
+library(pheatmap)
+topn <- rownames(head(top_all[order(top_all$adj.P.Val), ], n = 50))
+z <- cpm(dge, log=TRUE)[topn, ]
+pheatmap(z, annotation_col = data.frame(Group=meta_comb$group, Source=meta_comb$source))
+
 
 ##### 11. Save R objects for future use #####
 saveRDS(dge, file = "dge_combined_filtered.rds")
