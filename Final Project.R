@@ -188,7 +188,7 @@ fit <- lmFit(v, design)
 fit <- eBayes(fit)
 
 # Extract results for the group effect (name may be "groupGlioma" or "groupGlioma" depending on factor levels)
-coef_name <- grep("groupNormal", colnames(fit$coefficients), value = TRUE)
+coef_name <- grep("groupGlioma", colnames(fit$coefficients), value = TRUE)
 coef_name
 top_all <- topTable(fit, coef = coef_name[1], number = Inf, sort.by = "P")
 
@@ -197,12 +197,57 @@ top_all <- topTable(fit, coef = coef_name[1], number = Inf, sort.by = "P")
 ##### 9. Select upregulated in Glioma #####
 # criteria: logFC > 1 and adj.P.Val < 0.05 (adjust as needed)
 top_sig <- top_all[top_all$logFC > 1 & top_all$adj.P.Val < 0.05, ]
+
 nrow(top_sig)
 head(top_sig)
+
+top_by_expression <- top_sig[order(-top_sig$AveExpr), ]
+head(top_by_expression)
+
+# Get the gene IDs from the rownames
+candidate_genes <- rownames(top_by_expression)
+
+
+library(biomaRt)
+mart <- useEnsembl(biomart="genes", dataset="hsapiens_gene_ensembl")
+attributes <- listAttributes(mart)
+head(attributes, 50)
+
+proteins <- getBM(
+  attributes=c('ensembl_gene_id', 'hgnc_symbol', 'uniprotswissprot'),
+  filters='ensembl_gene_id',
+  values=candidate_genes,
+  mart=mart
+)
+head(proteins)
+
+library(dplyr)
+
+# Suppose your data frame is called 'proteins'
+proteins_filtered <- proteins %>%
+  filter(uniprotswissprot != "") %>%    # Keep only rows with non-empty UniProt IDs
+  distinct(ensembl_gene_id, .keep_all = TRUE)  # Keep only the first occurrence per gene
+
+# Check result
+head(proteins_filtered)
+library(httr)
+
+top_all_df <- top_by_expression
+top_all_df$ensembl_gene_id <- rownames(top_by_expression)
+
+all_candidate_genes <- top_all_df %>%
+  left_join(proteins_filtered, by = "ensembl_gene_id")
+
+# Inspect
+head(all_candidate_genes)
+
+
 
 # Save results
 write.csv(top_all, "DE_all_genes_Glioma_vs_GTex.csv", row.names = TRUE)
 write.csv(top_sig, "DE_upregulated_genes_Glioma_vs_GTex.csv", row.names = TRUE)
+write.csv(top_by_expression, "ORDERED_DE_upregulated_genes_Glioma_vs_GTex.csv", row.names = TRUE)
+write.csv(all_candidate_genes, "ORDERED_all_candidate_genes.csv", row.names = TRUE)
 
 ##### 10. Quick visualizations #####
 # Volcano plot
@@ -221,4 +266,5 @@ pheatmap(z, annotation_col = data.frame(Group=meta_comb$group, Source=meta_comb$
 saveRDS(dge, file = "dge_combined_filtered.rds")
 saveRDS(v, file = "voom_object.rds")
 saveRDS(meta_comb, file = "meta_combined.rds")
+
 
