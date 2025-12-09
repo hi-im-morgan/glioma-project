@@ -1,0 +1,261 @@
+Gene_ID,Domain_Name,Description,E_Value,Start,End
+P41586,7tm_2,7 transmembrane receptor (Secretin family),1.3999999999999998e-93,151,396
+P41587,7tm_2,7 transmembrane receptor (Secretin family),1.8999999999999996e-86,125,371
+P41180,7tm_3,7 transmembrane sweet-taste receptor of 3 GCPR,4.399999999999999e-86,606,856
+P43220,7tm_2,7 transmembrane receptor (Secretin family),1.2999999999999998e-79,144,398
+P30988,7tm_2,7 transmembrane receptor (Secretin family),6.999999999999999e-79,146,387
+P48960,7tm_2,7 transmembrane receptor (Secretin family),1.4999999999999997e-77,545,781
+P24941,Pkinase,Protein kinase domain,1.7999999999999996e-77,4,286
+Q16602,7tm_2,7 transmembrane receptor (Secretin family),4.499999999999999e-77,139,380
+Q16816,Pkinase,Protein kinase domain,9.999999999999998e-77,20,288
+P06493,Pkinase,Protein kinase domain,3.7999999999999996e-76,4,287
+O96017,Pkinase,Protein kinase domain,1.4999999999999997e-75,221,486
+P11801,Pkinase,Protein kinase domain,2.0999999999999996e-75,98,355
+Q14680,Pkinase,Protein kinase domain,6.299999999999999e-75,11,263
+Q8N568,Pkinase,Protein kinase domain,2.3999999999999994e-73,394,651
+P32246,7tm_1,7 transmembrane receptor (rhodopsin family),2.5999999999999995e-73,51,301
+Q9UEE5,Pkinase,Protein kinase domain,7.099999999999998e-73,65,321
+O00444,Pkinase,Protein kinase domain,3.8999999999999997e-72,12,265
+Q96GD4,Pkinase,Protein kinase domain,5.9e-72,77,327
+Q15139,Pkinase,Protein kinase domain,1.6999999999999998e-71,587,839
+O14965,Pkinase,Protein kinase domain,1.7999999999999997e-71,133,383
+P35414,7tm_1,7 transmembrane receptor (rhodopsin family),3.899999999999999e-71,45,309
+P51817,Pkinase,Protein kinase domain,7.499999999999999e-71,51,303
+Q9H1R3,Pkinase,Protein kinase domain,1.1999999999999997e-70,287,540
+Q14246,7tm_2,7 transmembrane receptor (Secretin family),1.6e-70,601,840
+O94806,Pkinase,Protein kinase domain,1.7999999999999998e-70,580,832
+O94768,Pkinase,Protein kinase domain,9.199999999999999e-70,36,293
+P33981,Pkinase,Protein kinase domain,2.3999999999999996e-69,525,791
+O14936,Pkinase,Protein kinase domain,3.699999999999999e-69,12,276
+Q16644,Pkinase,Protein kinase domain,1.2e-68,47,304
+P25103,7tm_1,7 transmembrane receptor (rhodopsin family),1.8999999999999998e-68,49,305
+P35346,7tm_1,7 transmembrane receptor (rhodopsin family),2.6999999999999997e-68,57,304
+Q8NEV1,Pkinase,Protein kinase domain,2.8999999999999996e-68,39,324
+P49238,7tm_1,7 transmembrane receptor (rhodopsin family),3.4999999999999997e-68,48,293
+P51679,7tm_1,7 transmembrane receptor (rhodopsin family),3.8999999999999995e-68,56,304
+P25025,7tm_1,7 transmembrane receptor (rhodopsin family),7.099999999999999e-68,65,314
+P61073,7tm_1,7 transmembrane receptor (rhodopsin family),1.1999999999999998e-67,55,302
+P49863,Trypsin,Trypsin,1.2999999999999998e-67,27,254
+O14757,Pkinase,Protein kinase domain,2.0999999999999995e-67,11,264
+Q00534,Pkinase,Protein kinase domain,9.999999999999998e-67,13,300
+P51681,7tm_1,7 transmembrane receptor (rhodopsin family),3.5999999999999996e-66,47,297
+O15393,Trypsin,Trypsin,5.999999999999999e-66,256,484
+P47211,7tm_1,7 transmembrane receptor (rhodopsin family),8.699999999999999e-66,50,303
+Q96Q40,Pkinase,Protein kinase domain,3.1999999999999995e-65,104,387
+P32249,7tm_1,7 transmembrane receptor (rhodopsin family),4.7999999999999995e-65,48,308
+Q8NF86,Trypsin,Trypsin,4.999999999999999e-65,37,274
+P25106,7tm_1,7 transmembrane receptor (rhodopsin family),7.399999999999999e-65,62,315
+P41597,7tm_1,7 transmembrane receptor (rhodopsin family),1.4999999999999997e-64,59,305
+P51955,Pkinase,Protein kinase domain,1.3999999999999999e-63,8,270
+Q9Y5Y6,Trypsin,Trypsin,3.0999999999999993e-63,615,849
+P11802,Pkinase,Protein kinase domain,3.4999999999999995e-63,6,295
+P48740,Trypsin,Trypsin,2e-62,449,691
+P35367,7tm_1,7 transmembrane receptor (rhodopsin family),2.6e-62,45,468
+P05156,Trypsin,Trypsin,3.8999999999999995e-62,340,569
+Q9BY15,7tm_2,7 transmembrane receptor (Secretin family),4.3e-62,355,594
+P49682,7tm_1,7 transmembrane receptor (rhodopsin family),4.3e-62,70,318
+Q99677,7tm_1,7 transmembrane receptor (rhodopsin family),4.8999999999999995e-62,57,311
+P00749,Trypsin,Trypsin,9.6e-62,179,419
+P12544,Trypsin,Trypsin,3.4e-61,29,254
+Q96P65,7tm_1,7 transmembrane receptor (rhodopsin family),2.8000000000000002e-59,62,332
+P21730,7tm_1,7 transmembrane receptor (rhodopsin family),4.5e-59,54,300
+Q8WXR4,Pkinase,Protein kinase domain,1.6e-58,27,293
+P49146,7tm_1,7 transmembrane receptor (rhodopsin family),3.8e-58,67,325
+P30550,7tm_1,7 transmembrane receptor (rhodopsin family),7.199999999999999e-58,57,320
+P25105,7tm_1,7 transmembrane receptor (rhodopsin family),2.6999999999999996e-57,33,293
+P25116,7tm_1,7 transmembrane receptor (rhodopsin family),1.3999999999999997e-56,120,371
+Q9BYP7,Pkinase,Protein kinase domain,4.499999999999999e-56,152,405
+Q7RTX1,7tm_3,7 transmembrane sweet-taste receptor of 3 GCPR,1.1e-55,562,811
+Q9Y271,7tm_1,7 transmembrane receptor (rhodopsin family),3.0999999999999996e-55,40,295
+Q99705,7tm_1,7 transmembrane receptor (rhodopsin family),3.7e-55,57,311
+P30291,Pkinase,Protein kinase domain,1.9e-54,299,568
+Q9H1C0,7tm_1,7 transmembrane receptor (rhodopsin family),1.4999999999999999e-53,40,297
+P46094,7tm_1,7 transmembrane receptor (rhodopsin family),2.6e-53,48,287
+Q15077,7tm_1,7 transmembrane receptor (rhodopsin family),4.7e-53,44,300
+P17658,Ion_trans,Ion transport protein,1.3e-52,177,468
+Q8TDU9,7tm_1,7 transmembrane receptor (rhodopsin family),1.8e-52,56,309
+O00574,7tm_1,7 transmembrane receptor (rhodopsin family),9.1e-52,48,288
+Q8IYL9,7tm_1,7 transmembrane receptor (rhodopsin family),1.5e-51,32,290
+P55085,7tm_1,7 transmembrane receptor (rhodopsin family),5.5e-51,93,344
+P58173,7tm_4,Olfactory receptor,8.6e-51,33,305
+P09871,Trypsin,Trypsin,1.3e-50,438,675
+Q13585,7tm_1,7 transmembrane receptor (rhodopsin family),7e-50,45,294
+Q99788,7tm_1,7 transmembrane receptor (rhodopsin family),1.4999999999999998e-49,57,316
+O00254,7tm_1,7 transmembrane receptor (rhodopsin family),2e-49,112,358
+Q86VZ1,7tm_1,7 transmembrane receptor (rhodopsin family),3.2999999999999997e-49,40,293
+Q96RI0,7tm_1,7 transmembrane receptor (rhodopsin family),8.099999999999999e-49,95,340
+Q9UPC5,7tm_1,7 transmembrane receptor (rhodopsin family),1.7999999999999998e-48,71,327
+P0C1S8,Pkinase,Protein kinase domain,2.1999999999999998e-48,214,482
+P25089,7tm_1,7 transmembrane receptor (rhodopsin family),5.7e-48,43,302
+P54762,Pkinase,Protein kinase domain,6.899999999999999e-48,621,876
+P37288,7tm_1,7 transmembrane receptor (rhodopsin family),7.1e-48,68,348
+P21462,7tm_1,7 transmembrane receptor (rhodopsin family),8.3e-48,43,301
+P43405,Pkinase,Protein kinase domain,1e-47,374,620
+P07948,Pkinase,Protein kinase domain,5.4e-47,249,492
+P29323,Pkinase,Protein kinase domain,6.1e-47,623,878
+Q06187,Pkinase,Protein kinase domain,8.699999999999999e-47,404,648
+Q9BXA5,7tm_1,7 transmembrane receptor (rhodopsin family),1.8e-46,40,295
+P06239,Pkinase,Protein kinase domain,5.1e-46,247,488
+P06241,Pkinase,Protein kinase domain,9e-46,273,516
+P0DMS8,7tm_1,7 transmembrane receptor (rhodopsin family),1.3e-45,29,282
+Q8N6U8,7tm_1,7 transmembrane receptor (rhodopsin family),2.7000000000000002e-45,44,324
+P08631,Pkinase,Protein kinase domain,1.4999999999999999e-44,264,507
+P54760,Pkinase,Protein kinase domain,5.2e-44,617,871
+P24530,7tm_1,7 transmembrane receptor (rhodopsin family),5.5e-44,118,384
+P54753,Pkinase,Protein kinase domain,5.999999999999999e-44,635,890
+P07947,Pkinase,Protein kinase domain,3.2999999999999998e-43,280,522
+O00421,7tm_1,7 transmembrane receptor (rhodopsin family),6.4e-43,56,300
+Q9NZP8,Trypsin,Trypsin,2.6e-42,247,479
+Q9H244,7tm_1,7 transmembrane receptor (rhodopsin family),3.8e-42,49,298
+Q8NGD1,7tm_4,Olfactory receptor,4.2e-42,33,303
+P21731,7tm_1,7 transmembrane receptor (rhodopsin family),6.6e-42,42,308
+O43353,Pkinase,Protein kinase domain,3.1999999999999996e-41,22,287
+P25101,7tm_1,7 transmembrane receptor (rhodopsin family),1.1e-40,97,367
+Q96K78,7tm_2,7 transmembrane receptor (Secretin family),3.2e-40,433,715
+Q9BPV8,7tm_1,7 transmembrane receptor (rhodopsin family),4.9e-40,62,317
+Q8NFN8,7tm_3,7 transmembrane sweet-taste receptor of 3 GCPR,1.3e-39,46,311
+P58173,7tm_1,7 transmembrane receptor (rhodopsin family),1.8999999999999998e-39,41,290
+Q13308,Pkinase,Protein kinase domain,3.8999999999999996e-39,799,1058
+Q96KB5,Pkinase,Protein kinase domain,4.6999999999999996e-39,35,316
+P33032,7tm_1,7 transmembrane receptor (rhodopsin family),1.6e-38,53,295
+P00533,Pkinase,Protein kinase domain,2.5999999999999996e-38,712,964
+Q99500,7tm_1,7 transmembrane receptor (rhodopsin family),3.2999999999999997e-38,56,298
+P08922,Pkinase,Protein kinase domain,4.1e-38,1950,2212
+P51617,Pkinase,Protein kinase domain,9.499999999999999e-38,214,514
+Q8NGU4,7tm_4,Olfactory receptor,1.4e-37,32,305
+Q9NQS5,7tm_1,7 transmembrane receptor (rhodopsin family),2.2e-37,37,370
+P21439,ABC_tran,ABC transporter,2.6000000000000002e-37,412,561
+Q5NUL3,7tm_1,7 transmembrane receptor (rhodopsin family),9.7e-37,58,321
+Q92519,Pkinase,Protein kinase domain,1.1e-36,75,308
+P16473,7tm_1,7 transmembrane receptor (rhodopsin family),3.5e-36,431,678
+Q08345,Pkinase,Protein kinase domain,4.6e-36,613,901
+O95136,7tm_1,7 transmembrane receptor (rhodopsin family),6.699999999999999e-35,50,288
+P36897,Pkinase,Protein kinase domain,2.8e-34,208,489
+Q8NGD1,7tm_1,7 transmembrane receptor (rhodopsin family),6.6000000000000005e-34,41,287
+O43194,7tm_1,7 transmembrane receptor (rhodopsin family),8.999999999999999e-34,58,344
+Q03518,ABC_tran,ABC transporter,9.2e-34,521,671
+Q16281,Ion_trans,Ion transport protein,2.1e-33,169,409
+P51787,Ion_trans,Ion transport protein,5.9999999999999997e-33,124,358
+Q16581,7tm_1,7 transmembrane receptor (rhodopsin family),1.0999999999999999e-32,40,179
+P21439,ABC_tran,ABC transporter,1.2e-31,1052,1210
+O95477,ABC_tran,ABC transporter,4.2e-31,917,1061
+Q8NGU4,7tm_1,7 transmembrane receptor (rhodopsin family),1.2e-29,40,290
+Q86UK0,ABC_tran,ABC transporter,8.000000000000001e-29,1362,1506
+Q86UQ4,ABC_tran,ABC transporter,8.5e-29,3859,4004
+Q9Y653,7tm_2,7 transmembrane receptor (Secretin family),1.6000000000000001e-28,403,654
+P16234,Pkinase,Protein kinase domain,2.0000000000000002e-28,778,946
+Q9HBX9,7tm_1,7 transmembrane receptor (rhodopsin family),1e-27,422,681
+O15439,ABC_tran,ABC transporter,1.3e-26,1058,1205
+Q86UK0,ABC_tran,ABC transporter,1.4e-26,2273,2417
+P06681,Trypsin,Trypsin,1.6e-26,473,703
+Q96RU7,Pkinase,Protein kinase domain,1.8e-26,83,315
+P07333,Pkinase,Protein kinase domain,3.4e-25,749,907
+Q96P67,7tm_1,7 transmembrane receptor (rhodopsin family),1.4999999999999998e-24,32,309
+O15438,ABC_tran,ABC transporter,2.5999999999999996e-24,1306,1454
+O15439,ABC_tran,ABC transporter,5.7e-23,428,562
+Q14571,Ion_trans,Ion transport protein,3.5000000000000005e-22,2265,2551
+O95477,ABC_tran,ABC transporter,8.300000000000001e-22,1932,2073
+Q86UQ4,ABC_tran,ABC transporter,1e-21,4738,4884
+O15438,ABC_tran,ABC transporter,1.4e-21,644,778
+P04201,7tm_1,7 transmembrane receptor (rhodopsin family),2e-21,50,280
+Q16581,7tm_1,7 transmembrane receptor (rhodopsin family),9.1e-20,333,435
+O95800,7tm_1,7 transmembrane receptor (rhodopsin family),2e-17,59,376
+P33897,ABC_tran,ABC transporter,1.7e-16,492,633
+Q6SJ93,Trypsin_2,Trypsin-like peptidase domain,1.8e-16,475,664
+O43683,Pkinase,Protein kinase domain,6.5e-16,790,1004
+Q9HB14,Ion_trans_2,Ion channel,1.8e-15,92,149
+Q7Z602,7tm_1,7 transmembrane receptor (rhodopsin family),7.3e-15,38,276
+Q9UGI6,Ion_trans_2,Ion channel,4.2e-14,468,546
+Q9H2S1,Ion_trans_2,Ion channel,4.2e-14,319,397
+Q9HB14,Ion_trans_2,Ion channel,5.7e-14,198,283
+P17658,Ion_trans_2,Ion channel,7.3e-14,385,458
+P49146,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,2.2e-13,62,339
+P33032,7tm_4,Olfactory receptor,1.8e-12,46,168
+P51787,Ion_trans_2,Ion channel,2.5e-12,273,348
+Q7Z2W7,Ion_trans,Ion transport protein,4.2e-12,743,989
+P16234,Pkinase,Protein kinase domain,4.9e-12,596,689
+P35346,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,5.2e-12,53,318
+Q13585,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,7.6e-12,43,204
+P07333,Pkinase,Protein kinase domain,1.1e-11,584,678
+P0DMS8,7tm_4,Olfactory receptor,1.4e-11,22,293
+P51679,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,2.1e-11,50,318
+Q13585,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,7.3e-11,39,308
+Q9HBA0,Ion_trans,Ion transport protein,1.1e-10,475,729
+P0DMS8,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,1.3e-10,26,293
+P32249,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,3.2e-9,41,166
+Q8N3Z0,Trypsin,Trypsin,4.6e-9,140,203
+O95084,Trypsin,Trypsin,6e-9,148,289
+P24530,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,6.3e-9,112,399
+Q9Y366,ABC_transp_aux,ABC-type uncharacterized transport system,6.5e-9,25,117
+O95084,Trypsin_2,Trypsin-like peptidase domain,1.4e-8,160,321
+Q99705,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,2.3e-8,51,321
+P30550,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,3.6e-8,122,339
+Q99500,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,4.1e-8,55,312
+P55085,7TM_GPCR_Srw,Serpentine type 7TM GPCR chemoreceptor Srw,5.7e-8,158,361
+Q9NQS5,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,5.9e-8,29,171
+Q99677,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,6.3e-8,50,323
+Q9Y271,7TM_GPCR_Srw,Serpentine type 7TM GPCR chemoreceptor Srw,7e-8,31,298
+P33032,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,8.8e-8,48,309
+P32246,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,1.1e-7,45,316
+Q9Y271,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,4.2e-7,32,227
+P32249,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,5.4e-7,42,322
+P30550,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,5.4e-7,52,336
+Q8NGU4,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,7.7e-7,36,134
+P51681,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,9e-7,41,259
+O60566,Pkinase,Protein kinase domain,9.1e-7,823,921
+Q16581,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,1.2e-6,336,448
+P24530,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,1.9e-6,111,320
+P41597,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,2.6e-6,53,316
+P35367,7tm_4,Olfactory receptor,3.8e-6,35,163
+P21730,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,4.4e-6,49,308
+Q9BPV8,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,4.4e-6,106,286
+P37288,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,4.8e-6,129,363
+P61073,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,5.9e-6,51,257
+O95136,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,9.5e-6,49,299
+Q9Y271,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,1e-5,43,252
+P49863,Trypsin_2,Trypsin-like peptidase domain,1e-5,54,219
+P49238,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,1.3e-5,43,250
+P37288,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,1.7e-5,63,352
+P35367,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,2e-5,45,207
+Q8IZK6,Ion_trans,Ion transport protein,2.7e-5,344,515
+P35414,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,3.5e-5,91,325
+P32246,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,5e-5,44,202
+Q8WXR4,Pkinase_fungal,Fungal protein kinase,7.3e-5,137,204
+O00444,Pkinase_fungal,Fungal protein kinase,7.7e-5,118,204
+Q8TF76,Pkinase,Protein kinase domain,9.9e-5,486,662
+Q96RI0,7tm_4,Olfactory receptor,1.2e-4,86,306
+P47211,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,1.3e-4,78,320
+P32249,7tm_4,Olfactory receptor,1.6e-4,38,324
+P35346,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,1.9e-4,49,234
+P05156,Trypsin_2,Trypsin-like peptidase domain,2e-4,367,533
+Q16581,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,2.1e-4,62,162
+O00574,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,2.3e-4,43,302
+P21730,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,2.7e-4,97,293
+Q8N3Z0,Trypsin_2,Trypsin-like peptidase domain,3.4e-4,154,350
+P47211,7TM_GPCR_Srw,Serpentine type 7TM GPCR chemoreceptor Srw,3.5e-4,68,320
+P21730,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,3.9e-4,47,172
+Q9NQS5,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,4.3e-4,32,156
+P35346,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,4.9e-4,128,317
+P55040,ABC_tran,ABC transporter,5.7e-4,77,115
+P41597,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,5.7e-4,52,184
+P35414,7tm_4,Olfactory receptor,0.0011,36,167
+O14936,Pkinase_fungal,Fungal protein kinase,0.0013,123,194
+Q9UGI6,Ion_trans,Ion transport protein,0.0018,449,551
+P49146,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,0.0018,60,181
+P35346,7TM_GPCR_Srw,Serpentine type 7TM GPCR chemoreceptor Srw,0.0019,203,321
+Q96P65,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,0.0021,58,344
+Q15077,7TM_GPCR_Srv,Serpentine type 7TM GPCR chemoreceptor Srv,0.0023,118,255
+P37288,7tm_4,Olfactory receptor,0.0026,59,189
+P16473,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,0.0028,423,632
+P36897,Pkinase_fungal,Fungal protein kinase,0.0034,328,386
+P04201,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,0.0034,41,221
+Q9HB14,Ion_trans,Ion transport protein,0.0045,22,154
+O15393,Trypsin_2,Trypsin-like peptidase domain,0.0049,283,451
+P58173,7TM_GPCR_Srbc,Serpentine type 7TM GPCR chemoreceptor Srbc,0.0054,30,155
+P49682,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,0.0061,65,278
+Q8NEV1,Pkinase_fungal,Fungal protein kinase,0.0062,147,203
+P30550,7tm_4,Olfactory receptor,0.0062,49,187
+P25101,7TM_GPCR_Srsx,Serpentine type 7TM GPCR chemoreceptor Srsx,0.007,91,141
+P33032,7TM_GPCR_Srx,Serpentine type 7TM GPCR chemoreceptor Srx,0.009,48,181
+P24530,7tm_4,Olfactory receptor,0.0097,109,237
+Q15645,ABC_tran,ABC transporter,0.0097,172,235
