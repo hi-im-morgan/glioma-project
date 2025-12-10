@@ -10,13 +10,6 @@ library(ggplot2)
 library(ggrepel)
 
 
-#Install depmap package for essentiality data 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("depmap", ask = FALSE)
-
-library(depmap)
-
 
 # Set working directory (adjust to your path)
 setwd("C:/Users/jerry/OneDrive/Documents/bioinformatics/Final Project - ML")
@@ -151,4 +144,5 @@ ggplot(top_20_plot, aes(x = reorder(Gene_ID, therapeutic_index),
     plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
     plot.subtitle = element_text(hjust = 0.5, size = 11)
   )
+
 
